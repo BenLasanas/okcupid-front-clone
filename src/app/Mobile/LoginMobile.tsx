@@ -11,7 +11,7 @@ function LoginMobile() {
       <div className="flex flex-col items-center justify-center">
         <h1 className="max-w-[310px] font-bold text-2xl text-center text-[#2a2f35]">
           Enter email and password
-        </h1>{" "}
+        </h1>
         <form className="w-2/5 flex flex-col ">
           <label
             htmlFor="email"

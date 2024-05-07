@@ -13,7 +13,6 @@ import MobileBottom from "./app/Mobile/MobileBottom";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [isMobileImageUsed, setIsMobileImageUsed] = useState(false);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const backgroundColors = [
@@ -26,13 +25,7 @@ function App() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1095);
 
   const handleImageChange = (index: number) => {
-    if (!isMobileImageUsed) {
-      setCurrentImageIndex(index);
-    }
-  };
-
-  const handleMobileImageUsed = () => {
-    setIsMobileImageUsed(true);
+    setCurrentImageIndex(index);
   };
 
   useEffect(() => {
@@ -66,20 +59,13 @@ function App() {
               {isLargeScreen && (
                 <div>
                   <div
-                    className={`flex flex-col items-center justify-center  bg-[${
-                      isMobileImageUsed
-                        ? "#879ae6"
-                        : backgroundColors[currentImageIndex]
-                    }]`}
+                    className={`flex flex-col items-center justify-center  bg-[${backgroundColors[currentImageIndex]}]`}
                   >
                     <div className="flex flex-col h-max">
                       <Header />
                       <div className="flex justify-start px-4">
                         <Body />
-                        <ImageSlideshow
-                          onImageChange={handleImageChange}
-                          onMobileImageUsed={handleMobileImageUsed}
-                        />
+                        <ImageSlideshow onImageChange={handleImageChange} />
                       </div>
                     </div>
                   </div>
@@ -110,7 +96,6 @@ function App() {
           }
         />
         <Route path="/loginMobile" element={<LoginMobile />} />
-        {/* Add the new route */}
       </Routes>
     </Router>
   );

@@ -28,7 +28,8 @@ function MobileBody() {
       </button>
       <button
         onClick={navigateToLogin}
-        className="mt-2 border-none text-white flex justify-center items-center w-11/12 py-2.5 px-4 border-0 bg-transparent cursor-pointer font-bold text-sm leading-none tracking-wider text-center rounded-[2px] overflow-wrap break-word border-2 min-h-[48px]">
+        className="mt-2 border-none text-white flex justify-center items-center w-11/12 py-2.5 px-4  bg-transparent cursor-pointer font-bold text-sm leading-none tracking-wider text-center rounded-[2px] overflow-wrap break-word border-2 min-h-[48px]"
+      >
         SIGN IN <FontAwesomeIcon className="pl-2" icon={faChevronRight} />
       </button>
       <p className="w-full px-6 pb-4 text-white text-center text-xs leading-[1.3333333333] underline cursor-pointer font-bold ">

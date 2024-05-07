@@ -1,9 +1,7 @@
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 
-Modal.setAppElement("#root"); // replace '#root' with the id of your app element
+Modal.setAppElement("#root");
 
 function Header() {
   const [modalIsOpen, setModalIsOpen] = useState(false);

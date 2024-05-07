@@ -32,7 +32,7 @@ function Footer() {
     <footer className="flex justify-center items-start space-x-8 h-full bg-[#1a1a1a] pt-10 pb-11">
       {" "}
       <div className="flex flex-col items-center justify-center space-y-2 mt-4">
-        <button className="flex items-center justify-center p-0 border-0 w-56 text-white cursor-pointer inline-block box-border h-10 mt-5.5 rounded bg-[#4d5bff] font-bold tracking-wider text-center text-base leading-[3.875]">
+        <button className="flex items-center justify-center p-0 border-0 w-56 text-white cursor-pointer  box-border h-10 mt-5.5 rounded bg-[#4d5bff] font-bold tracking-wider text-center text-base leading-[3.875]">
           JOIN OKCUPID
         </button>
         <p className="text-white">© OkCupid 2024</p>
@@ -40,7 +40,7 @@ function Footer() {
         <img src="https://cdn.okccdn.com/media/img/logos/match-group-darkbg.png"></img>
       </div>
       <div className="flex flex-col">
-        <h1 className="pr-5 py-3 text-white font-semibold text-base tracking-wider font-bold">
+        <h1 className="pr-5 py-3 text-white font-semibold text-base tracking-wider ">
           LANGUAGE
         </h1>
         <button
@@ -57,10 +57,7 @@ function Footer() {
             {footerItem.title}
           </h1>
           {footerItem.items.map((item) => (
-            <p
-              key={item}
-              className="text-white text-base tracking-wider text-sm pb-1"
-            >
+            <p key={item} className="text-white  tracking-wider text-sm pb-1">
               {item}
             </p>
           ))}
